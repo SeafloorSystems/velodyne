@@ -1,0 +1,11 @@
+<launch>
+
+  <group>
+    <remap from="/velodyne_points" to="/cloud_in" />
+
+    <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
+      <arg name="frame_id" value="map" />
+    </include>
+  </group>
+  
+</launch>
